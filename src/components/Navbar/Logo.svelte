@@ -1,4 +1,24 @@
-<svg width="250" height="50" viewBox="0 0 927 155" fill="none" xmlns="http://www.w3.org/2000/svg">
+<script>
+	import anime from 'animejs';
+	import { onMount } from 'svelte';
+	onMount(() => {
+		var animation = anime({
+			targets: '#main-logo path',
+			strokeDashoffset: [anime.setDashoffset, 0],
+			easing: 'easeInOutSine',
+			duration: 1500,
+			delay: function (el, i) {
+				return i * 50;
+			},
+			direction: 'alternate',
+			loop: false,
+            autoplay: false
+		});
+        animation.play();
+	});
+</script>
+
+<svg id="main-logo" width="210" height="50" viewBox="0 0 927 155" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<mask
 		id="path-1-outside-1_2_4"
 		maskUnits="userSpaceOnUse"
